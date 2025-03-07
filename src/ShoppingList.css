@@ -1,0 +1,148 @@
+/* Shopping List App Styles */
+
+/* Custom font import (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+/* Base styles */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* App container styles */
+.shopping-list-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.shopping-list-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Title styles */
+h1 {
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+/* Input field styles */
+input[type="text"] {
+  border: 2px solid #e2e8f0;
+  transition: border-color 0.15s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+  outline: none;
+}
+
+/* Add button styles */
+.add-button {
+  background-color: #4299e1;
+  transition: background-color 0.2s;
+}
+
+.add-button:hover {
+  background-color: #3182ce;
+}
+
+.add-button:active {
+  transform: scale(0.98);
+}
+
+/* List item styles */
+li {
+  background-color: #fff;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+  border: 1px solid #edf2f7;
+}
+
+li:hover {
+  background-color: #f7fafc;
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  border-radius: 4px;
+}
+
+/* Delete button styles */
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 50%;
+  }
+  
+  .delete-button:hover {
+    background-color: #fff5f5;
+  }
+
+/* Completed item animation */
+.item-completed {
+  background-color:chartreuse;
+  text-decoration: line-through;
+  color: #a0aec0;
+  transition: all 0.3s ease;
+}
+
+/* Empty list message */
+.empty-list {
+  text-align: center;
+  color: #a0aec0;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+/* Item counter styles */
+.item-counter {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #718096;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #edf2f7;
+}
+
+/* Add item animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .shopping-list-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
